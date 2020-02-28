@@ -8,19 +8,19 @@ const App = () => {
     <div className="ui container comments">
       <CommentDetail
         author={faker.name.firstName()}
-        timeAgo={"Today at 4:45pm"}
+        timeAgo={faker.date.month()}
         avatar={faker.image.avatar()}
         blogText={faker.lorem.sentence()}
       />
       <CommentDetail
         author={faker.name.firstName()}
-        timeAgo={"Today at 5:45pm"}
+        timeAgo={faker.date.month()}
         avatar={faker.image.avatar()}
         blogText={faker.lorem.sentence()}
       />
       <CommentDetail
         author={faker.name.firstName()}
-        timeAgo={"Today at 6:45pm"}
+        timeAgo={faker.date.month()}
         avatar={faker.image.avatar()}
         blogText={faker.lorem.sentence()}
       />
