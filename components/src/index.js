@@ -1,52 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import faker from "faker";
+import CommentDetail from "./CommentDetail";
 
 const App = () => {
   return (
     <div className="ui container comments">
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img alt="avatar" src={faker.image.avatar()} />
-        </a>
-        <div className="content">
-          <a href="/" className="author">
-            Sam
-          </a>
-          <div className="metadata">
-            <span className="date">Today at 6pm</span>
-          </div>
-          <div className="text">Nice Blog Post!</div>
-        </div>
-      </div>
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img alt="avatar" src={faker.image.avatar()} />
-        </a>
-        <div className="content">
-          <a href="/" className="author">
-            Sam
-          </a>
-          <div className="metadata">
-            <span className="date">Today at 6pm</span>
-          </div>
-          <div className="text">Nice Blog Post!</div>
-        </div>
-      </div>
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img alt="avatar" src={faker.image.avatar()} />
-        </a>
-        <div className="content">
-          <a href="/" className="author">
-            Sam
-          </a>
-          <div className="metadata">
-            <span className="date">Today at 6pm</span>
-          </div>
-          <div className="text">Nice Blog Post!</div>
-        </div>
-      </div>
+      <CommentDetail
+        author={faker.name.firstName()}
+        timeAgo={"Today at 4:45pm"}
+        avatar={faker.image.avatar()}
+        blogText={faker.lorem.sentence()}
+      />
+      <CommentDetail
+        author={faker.name.firstName()}
+        timeAgo={"Today at 5:45pm"}
+        avatar={faker.image.avatar()}
+        blogText={faker.lorem.sentence()}
+      />
+      <CommentDetail
+        author={faker.name.firstName()}
+        timeAgo={"Today at 6:45pm"}
+        avatar={faker.image.avatar()}
+        blogText={faker.lorem.sentence()}
+      />
     </div>
   );
 };
